@@ -15,7 +15,7 @@ node[:deploy].each do |application, deploy|
     variables(:deploy => deploy, :application => application)
   end
 
-  template "/etc/monit.d/sidekiq_#{application}.monitrc" do
+  template "/etc/monit/conf.d/sidekiq_#{application}.monitrc" do
     owner "root"
     group "root"
     mode '0644'
